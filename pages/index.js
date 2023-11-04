@@ -10,31 +10,29 @@ import { connectedCredentials } from '../Store/Variables';
 import { onAuthStateChanged } from 'firebase/auth';
 import { auth } from '../Firebase/Firebase';
 import { useEffect } from 'react';
-
-
+// import { cookies } from 'next/headers'
+import { signOut } from 'firebase/auth'
 
 export default function Home() {
-  const setUserCredentials = useSetRecoilState(connectedCredentials);
+ 
   useEffect(() => {
-    const listen = onAuthStateChanged(auth, async (user) => {
-    
-      if (user) {
-        const id = await auth.currentUser.getIdToken();
-        console.log(id);
-        setUserCredentials({
-          name: user.email,
-          token: id
-        })
-      } else {
+    // Add a listener for the 'beforeunload' event
+    window.addEventListener('unload', handleBeforeUnload);
 
-        setUserCredentials({
-          name: null,
-          token: null
-        })
-      }
-    });
-
+    return () => {
+      // Remove the event listener when the component unmounts
+      window.removeEventListener('unload', handleBeforeUnload);
+    };
   }, []);
+
+  const handleBeforeUnload = async (event) => {
+    // Prompt the user before closing the browser tab/window
+    event.preventDefault();
+    event.returnValue = 'Are you sure to close';
+
+    // Sign out the user from Firebase
+    await signOut(auth);
+  };
     return ( 
       <>
       

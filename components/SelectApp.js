@@ -2,9 +2,15 @@ import React from 'react'
 import { RxCross1 } from "react-icons/rx";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLinkedinIn, faTwitter } from '@fortawesome/free-brands-svg-icons';
+import { auth } from '../Firebase/Firebase';
 function SelectApp({setProject}) {
-    async function handleLinkedinClick(){};
-    async function handleTwitterClick(){};
+    async function handleLinkedinClick(){
+      const uid=auth.currentUser.uid;
+      window.location.href = `http://localhost:5000/linkedin/authorize?uid=${uid}`;
+    };
+    async function handleTwitterClick(){
+      window.location.href = `http://localhost:5000/auth/twitter`;
+    };
     return (
         <div className="flex  text-center text-white absolute top-[26%] lg:top-[25%] left-[10%] lg:left-[50%] z-10">
           <div className="bg-[#04091E] flex flex-col justify-center items-center lg:px-20 lg:w-[30rem] border border-white rounded-3xl relative text-white">

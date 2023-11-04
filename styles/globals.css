@@ -44,3 +44,7 @@ body {
   -webkit-mask-composite: xor;
   mask-composite: exclude;
 }
+hanko-profile {
+ --background-color: #152637;
+ --color: white;
+}

@@ -11,6 +11,7 @@ function projectsection() {
         async function fetchData() {
           if(auth.currentUser){
             try {
+              console.log(auth.currentUser.displayName);
                 const response = await axios.get(`http://localhost:5000/general/allprojects/${auth.currentUser.displayName}`);
             
                 console.log(response.data);
@@ -50,6 +51,9 @@ function projectsection() {
               </div>
             </div>
          <div className="bg-[#111629] w-[28rem] h-[20rem] flex justify-center items-center rounded-3xl border border-white">
+        <p>Add Project</p>
+      </div>
+      <div className="bg-[#111629] w-[28rem] h-[20rem] flex justify-center items-center rounded-3xl border border-white">
         <p>Add Project</p>
       </div>
           </div>

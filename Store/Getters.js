@@ -1,6 +1,9 @@
 import { selector } from "recoil";
 import { checkState, connectedCredentials, userProfileDetails } from "./Variables";
+// configs/recoil.ts
+import { RecoilEnv } from 'recoil';
 
+RecoilEnv.RECOIL_DUPLICATE_ATOM_KEY_CHECKING_ENABLED = false;
 export const getLogin=selector({
     key: "c",
     get: ({get})=>{
