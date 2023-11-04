@@ -3,9 +3,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCircleCheck } from '@fortawesome/free-solid-svg-icons';
 import { useSetRecoilState } from 'recoil';
 import { checkState } from '../Store/Variables';
+import { useRouter } from 'next/router';
 function Demo() {
   const setLogin=useSetRecoilState(checkState);
-
+const router=useRouter();
 
   return (
     <div
@@ -55,24 +56,12 @@ function Demo() {
           <button
             className="aai-gradient-outline-btn w-44"
             onClick={() => {
-              const navbar = document.getElementById("cta_form-03-690461"); // Assuming 'navbar' is the id of your navbar element
-              const navbarPosition = navbar.offsetTop;
-
-              // Scroll to the navbar position
-              window.scrollTo({
-                top: navbarPosition,
-                behavior: "smooth", // Smooth scrolling animation
-              });
-              setLogin({
-                isSignUpOpen: true,
-                isLoginOpen: false,
-              });
+             router.push("/sign-in")
             }}
           >
-            <a href="#cta_form-03-690461" target="_self">
-              {" "}
+            
               Get Started
-            </a>
+       
           </button>
         </div>
       </div>

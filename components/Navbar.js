@@ -21,6 +21,7 @@ function Navbar() {
   const setUserCredentials = useSetRecoilState(connectedCredentials);
   useEffect(() => {
     const listen = onAuthStateChanged(auth, async (user) => {
+      
     // console.log(auth);
       if (user) {
         const id = await auth.currentUser.getIdToken();
@@ -73,7 +74,7 @@ function Navbar() {
           </div>
           <div className="lg:flex gap-6 px-9 text-[16px] font-[500] lg:visible hidden">
             <Link href="/">Home</Link>
-            <Link className=" cursor-pointer" href="sign-in"  >About Us</Link>
+            <Link className=" cursor-pointer" href="/projectsection"  >Dashboard</Link>
             <p
               className=" cursor-pointer"
               onClick={() => {
@@ -89,24 +90,12 @@ function Navbar() {
             >
               Demo
             </p>
-            <Link href="/pricing">Pricing</Link>
+            {/* <Link href="/pricing">Pricing</Link> */}
             <Link href="/contactus">Contact</Link>
           </div>
           <div className="lg:flex flex-row gap-5 lg:visible hidden">
           {userId? (
-              // <div className="lg:flex lg:justify-center lg:items-center lg:visible hidden cursor-pointer">
-              //   <div className="bg-[orange] w-10 h-10 rounded-full" onClick={() => {
-              //     setToggle(true)
-              //   }}>
-              //     <Image
-              //       src={photoUrl}
-              //       height={200}
-              //       width={200}
-              //       className="rounded-full"
-              //       alt=""
-              //     />
-              //   </div>
-              // </div>
+             
               <UserButton afterSignOutUrl='/' />
             ) : (
               <>

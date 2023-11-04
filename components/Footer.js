@@ -41,39 +41,7 @@ const Footer = () => {
                 </div>
               </div>
             </div>
-            <div className="flex flex-col my-10 lg:my-0 gap-5">
-              <h1 className="text-[24px] font-[700] leading-[34px]">Links</h1>
-              <p className="text-[16px] font-[400] leading-[24px] hover:text-orange-400">
-                Home
-              </p>
-              <p className="text-[16px] font-[400] leading-[24px] hover:text-orange-400">
-                Service
-              </p>
-              <p className="text-[16px] font-[400] leading-[24px] hover:text-orange-400">
-                Pricing
-              </p>
-              <p className="text-[16px] font-[400] leading-[24px] hover:text-orange-400">
-                About US
-              </p>
-              <p className="text-[16px] font-[400] leading-[24px] hover:text-orange-400">
-                Feature
-              </p>
-            </div>
-            <div className="flex flex-col my-8 lg:my-0 gap-5">
-              <h1 className="text-[24px] font-[700] leading-[34px]">Artworks</h1>
-              <p className="text-[16px] font-[400] leading-[24px] hover:text-orange-400">
-                3D Artworks
-              </p>
-              <p className="text-[16px] font-[400] leading-[24px] hover:text-orange-400">
-                Photography
-              </p>
-              <p className="text-[16px] font-[400] leading-[24px] hover:text-orange-400">
-                PriFlat Illustrationcing
-              </p>
-              <p className="text-[16px] font-[400] leading-[24px] hover:text-orange-400">
-                Intro Videos
-              </p>
-            </div>
+            
             <div className="flex flex-col my-8 lg:my-0 gap-5">
               <h1 className="text-[24px] font-[700] leading-[34px]">Community</h1>
               <p className="text-[16px] font-[400] leading-[24px] hover:text-orange-400">
@@ -96,7 +64,7 @@ const Footer = () => {
           <div className="text-center lg:py-20 py-10">
             <hr className="py-2 text-gray-600" />
             <p className="text-[18px] font-[400] leading-[28px]">
-              Copyright @2023 Aai inc.
+              Copyright @2023 PostPilot inc.
             </p>
           </div>
         </div>

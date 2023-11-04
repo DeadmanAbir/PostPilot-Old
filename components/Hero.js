@@ -4,16 +4,12 @@ import Dashboard1 from "../public/dashboard-img.png"
 import Image from 'next/image'
 import { useState, useEffect, useRef } from "react";
 import Typewriter from 'typewriter-effect';
-import Login from './Login';
-import SignUp from './SignUp';
-import { useRecoilValue, useSetRecoilState } from 'recoil';
-import {getSignUp, getLogin} from "../Store/Getters";
-import { checkState } from '../Store/Variables';
-function Hero() {
-  const isSignUpOpen=useRecoilValue(getSignUp);
-  const isLoginOpen=useRecoilValue(getLogin);
-  const setLogin = useSetRecoilState(checkState);
 
+
+import { useRouter } from 'next/router';
+function Hero() {
+  
+const router=useRouter();
   return (
     <div
       className="bg-[url('/hero-bg-1.jpeg')]  pb-10 lg:mt-[-107px] pt-10 lg:pt-0 overflow-x-hidden"
@@ -46,11 +42,7 @@ function Hero() {
             <button
               className="aai-gradient-outline-btn w-[90%] lg:w-[180px]"
             onClick={() => {
-              setLogin({
-                isLoginOpen: false,
-                isSignUpOpen: true,
-            
-              });
+             router.push("sign-in")
             }}
             >
               Get Started
@@ -59,21 +51,10 @@ function Hero() {
         </div>
         <div className="px-5 lg:px-0">
           <Image src={Dashboard1} height={700} width={700} alt='Dashboard' />
-          {/* <Image src={Dashboard2} height={500} width={500} /> */}
-          {/* <img
-          src={Dashboard1}
-          className="lg:block hidden"
-          alt=""
-        />
-        <img
-          src={Dashboard2}
-          className="visible lg:hidden mt-12 lg:mt-0"
-          alt=""
-        /> */}
+          
         </div>
       </div>
-      {!isLoginOpen && isSignUpOpen ? <SignUp /> : null}
-      {isLoginOpen && !isSignUpOpen ? <Login /> : null}
+    
     </div>
   )
 }
