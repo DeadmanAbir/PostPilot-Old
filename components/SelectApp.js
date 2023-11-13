@@ -3,16 +3,18 @@ import { RxCross1 } from "react-icons/rx";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLinkedinIn, faTwitter } from '@fortawesome/free-brands-svg-icons';
 import { auth } from '../Firebase/Firebase';
-function SelectApp({setProject}) {
+import { checkForUserAndUpdate } from '../Utils/call';
+import { useAuth } from '@clerk/nextjs';
+function SelectApp({setProject, userId}) {
+
     async function handleLinkedinClick(){
-      const uid=auth.currentUser.uid;
-      window.location.href = `http://localhost:5000/linkedin/authorize?uid=${uid}`;
+    await checkForUserAndUpdate({userId});
+      window.location.href = `http://localhost:5000/linkedin/authorize?userId=${userId}`;
+      
     };
-    async function handleTwitterClick(){
-      window.location.href = `http://localhost:5000/auth/twitter`;
-    };
+    
     return (
-        <div className="flex  text-center text-white absolute top-[26%] lg:top-[25%] left-[10%] lg:left-[50%] z-10">
+        <div className="flex  text-center text-white absolute top-[36%] lg:top-[25%] left-[10%] lg:left-[50%] z-10">
           <div className="bg-[#04091E] flex flex-col justify-center items-center lg:px-20 lg:w-[30rem] border border-white rounded-3xl relative text-white">
             <RxCross1
               className="text-[25px] text-end absolute right-5 top-4 cursor-pointer"
@@ -30,11 +32,11 @@ function SelectApp({setProject}) {
 
               </button>
             </div>
-            <div className="py-3 w-[50%] lg:w-full lg:py-6 border border-gray-500 rounded-xl lg:rounded-3xl my-10">
+            {/* <div className="py-3 w-[50%] lg:w-full lg:py-6 border border-gray-500 rounded-xl lg:rounded-3xl my-10">
               <button onClick={handleTwitterClick}>
                 <FontAwesomeIcon icon={faTwitter} className='text-blue-600 trxt-[22px] lg:text-[50px]' />
               </button>
-            </div>
+            </div> */}
    
           </div>
         </div >
