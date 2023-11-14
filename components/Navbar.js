@@ -6,52 +6,28 @@ import { checkState } from '../Store/Variables';
 import { userName } from '../Store/Getters';
 import { userProfileDetails } from '../Store/Variables';
 import { useRouter } from 'next/router';
-import { auth } from '../Firebase/Firebase';
 import { RxCross1 } from "react-icons/rx";
-import { signOut } from 'firebase/auth';
 import dynamic from 'next/dynamic';
 import { connectedCredentials } from '../Store/Variables';
-import { onAuthStateChanged } from 'firebase/auth';
 import { useAuth as Auth, UserButton, currentUser, auth as serverAuth } from "@clerk/nextjs";
 
 
 function Navbar() {
+  // console.log(userId)
   const {userId}=Auth();
-  console.log(userId)
   const setUserCredentials = useSetRecoilState(connectedCredentials);
-  useEffect(() => {
-    const listen = onAuthStateChanged(auth, async (user) => {
-      
-    // console.log(auth);
-      if (user) {
-        const id = await auth.currentUser.getIdToken();
-        // cookies().set('uid', id, { secure: true })
-        setUserCredentials({
-          name: user.email,
-          token: id
-        })
-      } else {
-
-        setUserCredentials({
-          name: null,
-          token: null
-        })
-      }
-    });
-
-  }, []);
+ 
 
 
 
 
-
-  const [mobileNav, setMobileNav] = useState(false);
+  // const [mobileNav, setMobileNav] = useState(false);
+  const mobileNav=false;
   const setLogin = useSetRecoilState(checkState);
   const getUserName = useRecoilValue(userName);
   const setUserProfile = useSetRecoilState(userProfileDetails);
   const navigate=useRouter();
   const [isToggleOn, setToggle] = useState(false);
-  const photoUrl = auth.currentUser && auth.currentUser.photoURL? auth.currentUser.photoURL: "/profile.png";
   return (
     <>
       <div className="bg-[#080E26] sticky top-0 z-20 px-4">

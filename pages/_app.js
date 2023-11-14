@@ -13,14 +13,12 @@ import { ClerkProvider } from "@clerk/nextjs";
 import {neobrutalism, dark} from '@clerk/themes';
 
 function MyApp({ Component, pageProps }) {
-
-
   return (
     <RecoilRoot>
       <ClerkProvider appearance={{
         baseTheme: neobrutalism
       }}>
-        <Layout>
+        <Layout >
           <Component {...pageProps} />
         </Layout>
       </ClerkProvider>
@@ -28,3 +26,5 @@ function MyApp({ Component, pageProps }) {
   );
 }
 export default MyApp
+
+

@@ -19,7 +19,7 @@
     "@teamhanko/hanko-elements": "^0.9.0",
     "axios": "^1.5.1",
     "emailjs": "^4.0.3",
-    "firebase": "^10.5.0",
+    "fs": "^0.0.1-security",
     "next": "13.5.4",
     "next-auth": "^4.24.4",
     "react": "18.2.0",
@@ -35,5 +35,12 @@
     "eslint-config-next": "13.5.4",
     "postcss": "^8.4.31",
     "tailwindcss": "^3.3.3"
+  },
+  "browser": {
+    "fs": false,
+    "path": false,
+    "os": false
   }
 }
+
+

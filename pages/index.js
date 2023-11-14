@@ -7,14 +7,13 @@ import Card from '../components/Card'
 import Footer from '../components/Footer'
 import { useSetRecoilState } from 'recoil';
 import { connectedCredentials } from '../Store/Variables';
-import { onAuthStateChanged } from 'firebase/auth';
-import { auth } from '../Firebase/Firebase';
+
 import { useEffect } from 'react';
 // import { cookies } from 'next/headers'
-import { signOut } from 'firebase/auth'
-
+import { useClerk } from '@clerk/nextjs'
 export default function Home() {
- 
+  const { signOut } = useClerk();
+
   useEffect(() => {
     // Add a listener for the 'beforeunload' event
     window.addEventListener('unload', handleBeforeUnload);
@@ -30,8 +29,7 @@ export default function Home() {
     event.preventDefault();
     event.returnValue = 'Are you sure to close';
 
-    // Sign out the user from Firebase
-    await signOut(auth);
+    await signOut();
   };
     return ( 
       <>

@@ -3,8 +3,6 @@ import { RxCross1 } from "react-icons/rx";
 import { useSetRecoilState } from 'recoil';
 import { checkState } from '../Store/Variables';
 import { useRouter } from 'next/router';
-import { GoogleAuthProvider, signInWithPopup, signOut, createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
-import { auth } from '../Firebase/Firebase';
 import axios from 'axios';
 function SignUp() {
   const [email, setEmail] = useState(null);

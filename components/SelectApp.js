@@ -2,14 +2,17 @@ import React from 'react'
 import { RxCross1 } from "react-icons/rx";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLinkedinIn, faTwitter } from '@fortawesome/free-brands-svg-icons';
-import { auth } from '../Firebase/Firebase';
 import { checkForUserAndUpdate } from '../Utils/call';
 import { useAuth } from '@clerk/nextjs';
-function SelectApp({setProject, userId}) {
+function SelectApp({setProject, userId, data}) {
 
     async function handleLinkedinClick(){
-    await checkForUserAndUpdate({userId});
+    if(data.length<2){
+      await checkForUserAndUpdate({userId});
       window.location.href = `http://localhost:5000/linkedin/authorize?userId=${userId}`;
+    }else{
+      alert("Can't add more than 2 projects")
+    }
       
     };
     

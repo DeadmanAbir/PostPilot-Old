@@ -2,8 +2,6 @@ import {useState} from 'react'
 import { RxCross1 } from "react-icons/rx";
 import { useSetRecoilState } from 'recoil';
 import { checkState } from '../Store/Variables';
-import { GoogleAuthProvider, signInWithPopup, signInWithEmailAndPassword } from "firebase/auth";
-import {auth} from "../Firebase/Firebase"
 import { useRouter } from 'next/router'
 
 function Login() {
