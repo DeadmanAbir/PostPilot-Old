@@ -1,14 +1,13 @@
 import React from 'react'
 import Dashboard1 from "../public/dashboard-img.png"
-// import Dashboard2 from "../public/dashboard-img-2.png"
 import Image from 'next/image'
 import { useState, useEffect, useRef } from "react";
 import Typewriter from 'typewriter-effect';
-
+import { useAuth } from '@clerk/nextjs';
 
 import { useRouter } from 'next/router';
 function Hero() {
-  
+  const {userId}=useAuth();
 const router=useRouter();
   return (
     <div
@@ -42,7 +41,12 @@ const router=useRouter();
             <button
               className="aai-gradient-outline-btn w-[90%] lg:w-[180px]"
             onClick={() => {
-             router.push("sign-in")
+              if(userId){
+                router.push("projectsection")
+              }else{
+             router.push("/sign-in")
+
+              }
             }}
             >
               Get Started

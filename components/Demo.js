@@ -1,13 +1,11 @@
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCircleCheck } from '@fortawesome/free-solid-svg-icons';
-import { useSetRecoilState } from 'recoil';
-import { checkState } from '../Store/Variables';
 import { useRouter } from 'next/router';
+import { useAuth } from '@clerk/nextjs';
 function Demo() {
-  const setLogin=useSetRecoilState(checkState);
 const router=useRouter();
-
+const {userId}=useAuth();
   return (
     <div
       className="bg-[url('/service-1.jpeg')] text-white"
@@ -56,7 +54,12 @@ const router=useRouter();
           <button
             className="aai-gradient-outline-btn w-44"
             onClick={() => {
+              if(userId){
+                router.push("projectsection")
+              }else{
              router.push("/sign-in")
+
+              }
             }}
           >
             

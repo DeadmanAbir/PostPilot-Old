@@ -11,9 +11,15 @@ config.autoAddCss = false;
 library.add(fas, fab);
 import { ClerkProvider } from "@clerk/nextjs";
 import {neobrutalism, dark} from '@clerk/themes';
-
+import Head from 'next/head';
 function MyApp({ Component, pageProps }) {
   return (
+    <>
+    <Head>
+       
+        <link rel="icon" href="/PostPilot.png" type="image/png" sizes="64x64" />
+
+      </Head>
     <RecoilRoot>
       <ClerkProvider appearance={{
         baseTheme: neobrutalism
@@ -23,6 +29,7 @@ function MyApp({ Component, pageProps }) {
         </Layout>
       </ClerkProvider>
     </RecoilRoot>
+    </>
   );
 }
 export default MyApp

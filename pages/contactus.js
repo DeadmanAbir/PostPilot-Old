@@ -1,6 +1,7 @@
 "use client"
 import React, { useRef } from 'react';
 import emailjs from '@emailjs/browser';
+import Head from 'next/head';
 const Contact = () => {
 
     const form = useRef();
@@ -18,6 +19,9 @@ const Contact = () => {
 
     return (
         <div className="bg-[url('/signInBg.jpeg')] text-white">
+           <Head>
+        <title>PostPilot-ContactUs</title>
+      </Head>
           <div className="pt-5 pb-8 lg:px-0 px-4 flex flex-col justify-center items-center text-center gap-11">
             <div className="flex flex-col gap-12 items-center justify-center">
               <h1 className=" text-[28px] lg:text-[52px] font-[700] leading-[52px] ">
