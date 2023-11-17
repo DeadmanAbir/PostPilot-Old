@@ -5,8 +5,11 @@ import { useRouter } from 'next/router';
 import { RxCross1 } from "react-icons/rx";
 import { usePathname } from 'next/navigation'
 import { useAuth as Auth, UserButton, currentUser, auth as serverAuth } from "@clerk/nextjs";
-
-
+import MobileNav from './MobileNav';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faXmark } from '@fortawesome/free-solid-svg-icons';
+import { faBars } from '@fortawesome/free-solid-svg-icons';
+FontAwesomeIcon
 function Navbar() {
   const { userId } = Auth();
   console.log(userId)
@@ -16,7 +19,7 @@ function Navbar() {
 
 
 
-  const mobileNav = false;
+  const[mobileNav, setMobileNav] = useState(true);
  
   const navigate = useRouter();
   return (
@@ -28,15 +31,18 @@ function Navbar() {
               <Image className="h-[76px] w-[75px] lg:h-[75px] lg:w-[85px] cursor-pointer" src="/PostPilot.png" alt="" width={76} height={76} />
             </Link>
             {mobileNav ? (
-              <i className="fa-solid fa-xmark lg:hidden visible text-[24px]" onClick={() => {
+              
+              <FontAwesomeIcon icon={faXmark} style={{color: "white"}} className='lg:hidden visible text-[24px]' onClick={() => {
                 setMobileNav(false);
-              }}></i>
+                }}/>
+              
 
             ) : (
-              <i className="fa-solid fa-bars lg:hidden visible text-[24px]" onClick={() => {
-                setMobileNav(true);
-              }}></i>
+           
 
+              <FontAwesomeIcon icon={faBars} style={{color: "white"}} className='lg:hidden visible text-[24px]'  onClick={() => {
+                 setMobileNav(true);
+                 }} />
             )}
           </div>
           <div className="lg:flex gap-6 px-9 text-[16px] font-[500] lg:visible hidden">
@@ -98,6 +104,10 @@ function Navbar() {
         </div>
 
       </div>
+      {mobileNav ? (
+        <MobileNav  setMobileNav={setMobileNav}/>
+
+      ) : (null)}
 
     </>
   )
