@@ -13,7 +13,6 @@ export default function Home() {
       <>
        <Head>
         <title>PostPilot</title>
-        {/* <link rel="icon" href="/PostPilot.png" /> */}
 
       </Head>
   <Hero />

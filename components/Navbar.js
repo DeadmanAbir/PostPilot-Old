@@ -19,7 +19,7 @@ function Navbar() {
 
 
 
-  const[mobileNav, setMobileNav] = useState(true);
+  const[mobileNav, setMobileNav] = useState(false);
  
   const navigate = useRouter();
   return (
@@ -32,7 +32,7 @@ function Navbar() {
             </Link>
             {mobileNav ? (
               
-              <FontAwesomeIcon icon={faXmark} style={{color: "white"}} className='lg:hidden visible text-[24px]' onClick={() => {
+              <FontAwesomeIcon icon={faXmark} style={{color: "white"}} className='hidden lg:block text-[24px]' onClick={() => {
                 setMobileNav(false);
                 }}/>
               
@@ -40,7 +40,7 @@ function Navbar() {
             ) : (
            
 
-              <FontAwesomeIcon icon={faBars} style={{color: "white"}} className='lg:hidden visible text-[24px]'  onClick={() => {
+              <FontAwesomeIcon icon={faBars}  className='hidden lg:visible text-[24px]'  onClick={() => {
                  setMobileNav(true);
                  }} />
             )}
