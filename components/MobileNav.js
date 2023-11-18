@@ -31,7 +31,7 @@ function MobileNav({ setMobileNav }) {
                     <hr />
                     <p onClick={() => {
                         if (pathname != "/") {
-                            window.open("https://www.youtube.com/", "_blank");
+                            window.open("https://youtu.be/XU2uxFrCKj4?si=j2hx8OwK0iisZ969", "_blank");
                         } else {
                             const navbar = document.getElementById("demo_section"); // Assuming 'navbar' is the id of your navbar element
                             const navbarPosition = navbar.offsetTop;

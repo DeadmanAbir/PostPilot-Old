@@ -52,7 +52,7 @@ const Footer = () => {
               <a className="text-[16px] font-[400] leading-[24px] hover:text-orange-400" href="https://twitter.com/ItsDutta99" target="_blank" rel="noopener noreferrer">
                X(Formerly Twitter)
               </a>
-              <a className="text-[16px] font-[400] leading-[24px] hover:text-orange-400">
+              <a className="text-[16px] font-[400] leading-[24px] hover:text-orange-400" href="https://youtu.be/XU2uxFrCKj4?si=j2hx8OwK0iisZ969" target="_blank" rel="noopener noreferrer">
                 Demo Video
               </a>
               <a className="text-[16px] font-[400] leading-[24px] hover:text-orange-400" href="https://github.com/DeadmanAbir" target="_blank">
