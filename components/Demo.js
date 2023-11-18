@@ -29,26 +29,24 @@ const {userId}=useAuth();
             Create Content in Single Click with AI Power
           </h1>
           <p className="lg:text-[18px] text-[16px] font-[400] leading-[28px]">
-            Give our AI a few descriptions and we all automatically create blog
-            articles, product descriptions and more for you within just few
-            second.
+            Give PostPilot a few descriptions and we will automatically post AI generated news content everyday.
           </p>
           <div className="flex flex-col gap-5">
             <div className="flex items-center gap-4">
               <FontAwesomeIcon icon={faCircleCheck} />
               <p className="text-[18px] font-[400] leading-[27px]">
-                Country Citizenship
+                Daily Posting
               </p>
             </div>
             <div className="flex items-center gap-4">
               <FontAwesomeIcon icon={faCircleCheck} />
 
-              <p>Settling In Country</p>
+              <p>New Content Everyday</p>
             </div>
             <div className="flex items-center gap-4">
               <FontAwesomeIcon icon={faCircleCheck} />
 
-              <p>Entering & Leaving From Country</p>
+              <p>GPT Powered Posts</p>
             </div>
           </div>
           <button

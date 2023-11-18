@@ -1,5 +1,4 @@
-// import BiLogoFacebook from "react-icons/fa";
-import { faFacebookF, faInstagram, faTwitter, faYoutube } from "@fortawesome/free-brands-svg-icons";
+import { faLinkedin, faDiscord, faTwitter, faGithub } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Image from "next/image";
 const Footer = () => {
@@ -15,50 +14,50 @@ const Footer = () => {
                 height={100}
               />
               <p className="text-[18px] font-[400] leading-[27px]">
-                We provide one-stop solutions for all IT items; your bliss is just
-                a click away. Star Tech trusts in quality client
+                Posting AI Generated News Content Everyday with Ease.
               </p>
               <div className="flex gap-5">
                 <div className="bg-gray-800 rounded-full w-10 h-10 flex justify-center items-center">
-                  <a href="http://" target="_blank" rel="noopener noreferrer">
-                    <FontAwesomeIcon icon={faFacebookF} className=" text-gray-400" />
+                  <a href="https://www.linkedin.com/in/abir-dutta-408759223/" target="_blank" rel="noopener noreferrer" className=" text-gray-400">
+                    <FontAwesomeIcon icon={faLinkedin} />
                   </a>
                 </div>
                 <div className="bg-gray-800 rounded-full w-10 h-10 flex justify-center items-center">
-                  <a href="http://" target="_blank" rel="noopener noreferrer">
+                  <a href="https://twitter.com/ItsDutta99" target="_blank" rel="noopener noreferrer">
                     <FontAwesomeIcon icon={faTwitter} className=" text-gray-400" />
                   </a>
                 </div>
                 <div className="bg-gray-800 rounded-full w-10 h-10 flex justify-center items-center">
-                  <a href="http://" target="_blank" rel="noopener noreferrer">
-                    <FontAwesomeIcon icon={faInstagram} className=" text-gray-400" />
+                  <a href="http://discordapp.com/users/929439553264156742" target="_blank" rel="noopener noreferrer" className=" text-gray-400">
+                    <FontAwesomeIcon icon={faDiscord} />
                   </a>
                 </div>
                 <div className="bg-gray-800 rounded-full w-10 h-10 flex justify-center items-center">
-                  <a href="http://" target="_blank" rel="noopener noreferrer">
-                    <FontAwesomeIcon icon={faYoutube} className=" text-gray-400" />
+                  <a href="https://github.com/DeadmanAbir" target="_blank" rel="noopener noreferrer" className=" text-gray-400">
+                  <FontAwesomeIcon icon={faGithub} />
                   </a>
                 </div>
+                
               </div>
             </div>
             
             <div className="flex flex-col my-8 lg:my-0 gap-5">
-              <h1 className="text-[24px] font-[700] leading-[34px]">Community</h1>
-              <p className="text-[16px] font-[400] leading-[24px] hover:text-orange-400">
-                Global Partners
-              </p>
-              <p className="text-[16px] font-[400] leading-[24px] hover:text-orange-400">
-                Forum
-              </p>
-              <p className="text-[16px] font-[400] leading-[24px] hover:text-orange-400">
-                Virtual World
-              </p>
-              <p className="text-[16px] font-[400] leading-[24px] hover:text-orange-400">
-                Community
-              </p>
-              <p className="text-[16px] font-[400] leading-[24px] hover:text-orange-400">
-                Brand Assets
-              </p>
+              <h1 className="text-[24px] font-[700] leading-[34px]">Socials</h1>
+              <a className="text-[16px] font-[400] leading-[24px] hover:text-orange-400" href="http://discordapp.com/users/929439553264156742" target="_blank" rel="noopener noreferrer">
+               Discord
+              </a>
+              <a className="text-[16px] font-[400] leading-[24px] hover:text-orange-400" href="https://www.linkedin.com/in/abir-dutta-408759223/" target="_blank" rel="noopener noreferrer">
+                Linkedln
+              </a>
+              <a className="text-[16px] font-[400] leading-[24px] hover:text-orange-400" href="https://twitter.com/ItsDutta99" target="_blank" rel="noopener noreferrer">
+               X(Formerly Twitter)
+              </a>
+              <a className="text-[16px] font-[400] leading-[24px] hover:text-orange-400">
+                Demo Video
+              </a>
+              <a className="text-[16px] font-[400] leading-[24px] hover:text-orange-400" href="https://github.com/DeadmanAbir" target="_blank">
+                Github
+              </a>
             </div>
           </div>
           <div className="text-center lg:py-20 py-10">

@@ -52,7 +52,7 @@ function MobileNav({ setMobileNav }) {
                     <hr />
                 </div>
                 {userId ? (
-                    <div className="ml-5">
+                    <div className="ml-5" >
                     <UserButton afterSignOutUrl='/'  />
                     </div>
 
@@ -63,6 +63,7 @@ function MobileNav({ setMobileNav }) {
                             className="text-[20px] font-[300] underline underline-offset-8 "
                             onClick={() => {
                                 router.push("/sign-in")
+                                setMobileNav(false);
                             }}
                         >
                             Login
@@ -71,7 +72,8 @@ function MobileNav({ setMobileNav }) {
                         <button
                             className="aai-gradient-outline-btn mx-16"
                             onClick={() => {
-                                router.push("/sign-up")
+                                router.push("/sign-up");
+                                setMobileNav(false);
                             }}
                         >
                             Signup
