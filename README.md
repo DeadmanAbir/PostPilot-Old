@@ -10,7 +10,7 @@
   - [Prerequisites](#prerequisites)
   - [Installation](#installation)
   - [Backend](#backend)
-- [Demo](#Demo)
+- [Demo](#demo)
 
 ## Introduction
 
@@ -69,7 +69,7 @@ Here the repo for PostPilot's Backend- https://github.com/DeadmanAbir/PP-Backend
 
 - We have used `Nodemailer` for email notification. After every succesfull post via PostPilot, a email will be sent to user's gmail.
 
-## Demo-
+## Demo
 
 Here is a high level demo which shows how to use the app-
 
