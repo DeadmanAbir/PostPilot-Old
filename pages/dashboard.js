@@ -41,16 +41,16 @@ function dashboard() {
       })
       router.push("/projectsection");
       const timeoutId = setTimeout(() => {
-        toast.success("New Project Added successfully, and a demo post has benn done from yout account. Please check");
+        toast.success("New project added successfully, and a demo post has been done from yout account. Please check");
 
-      }, 3000);
+      }, 1000);
     } catch (e) {
       console.log(e.message);
       router.push("/projectsection");
       const timeoutId = setTimeout(() => {
         toast.error("Internal Error");
 
-      }, 3000);
+      }, 1000);
     }
 
 
