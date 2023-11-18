@@ -39,7 +39,7 @@ function SelectApp({ setProject, userId, data }) {
         <h1 className="text-[32px] lg:mx-0 mx-10 lg:text-[55px] font-[700] leading-[52px] pb-10 pt-20 lg:px-0 px-6">
           Select App
         </h1>
-        <div className="py-2 w-[50%] lg:w-full lg:py-6 border border-gray-500 rounded-xl lg:rounded-3xl" onClick={handleLinkedinClick}>
+        <div className="py-2 w-[50%] lg:w-full lg:py-6 border border-gray-500 rounded-xl lg:rounded-3xl mb-10 mx-20" onClick={handleLinkedinClick}>
           <button >
             <FontAwesomeIcon icon={faLinkedinIn} className="text-blue-600 text-[22px] lg:text-[50px]" />
 

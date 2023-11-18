@@ -117,7 +117,7 @@ function Dashboard() {
               type="text"
               placeholder="Name"
 
-              className="bg-[#080E26] border border-white py-3 lg:py-4 px-2 rounded-2xl"
+              className="bg-[#080E26] border border-white py-3 lg:py-4 px-2 rounded-2xl mb-10"
               required
               onChange={(e) => {
                 setName(e.target.value)

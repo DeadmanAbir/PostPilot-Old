@@ -19,7 +19,7 @@ function Navbar() {
 
 
 
-  const[mobileNav, setMobileNav] = useState(false);
+  const[mobileNav, setMobileNav] = useState(true);
  
   const navigate = useRouter();
   return (
@@ -31,18 +31,21 @@ function Navbar() {
               <Image className="h-[76px] w-[75px] lg:h-[75px] lg:w-[85px] cursor-pointer" src="/PostPilot.png" alt="" width={76} height={76} />
             </Link>
             {mobileNav ? (
+              <div className=' lg:hidden visible  text-[24px]'>
               
-              <FontAwesomeIcon icon={faXmark} style={{color: "white"}} className='hidden lg:block text-[24px]' onClick={() => {
+              <FontAwesomeIcon icon={faXmark} style={{color: "white"}}  onClick={() => {
                 setMobileNav(false);
                 }}/>
+                </div>
               
 
             ) : (
            
-
-              <FontAwesomeIcon icon={faBars}  className='hidden lg:visible text-[24px]'  onClick={() => {
+<div className='lg:hidden visible text-[24px]'>
+              <FontAwesomeIcon icon={faBars}    onClick={() => {
                  setMobileNav(true);
                  }} />
+                 </div>
             )}
           </div>
           <div className="lg:flex gap-6 px-9 text-[16px] font-[500] lg:visible hidden">
