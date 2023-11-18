@@ -19,7 +19,7 @@ function Navbar() {
 
 
 
-  const[mobileNav, setMobileNav] = useState(true);
+  const[mobileNav, setMobileNav] = useState(false);
  
   const navigate = useRouter();
   return (
