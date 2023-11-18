@@ -9,7 +9,7 @@
 - [Getting Started](#getting-started)
   - [Prerequisites](#prerequisites)
   - [Installation](#installation)
-- [Demo](#demo)
+- [Demo](#Demo)
 
 ## Introduction
 
