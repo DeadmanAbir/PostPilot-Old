@@ -11,6 +11,7 @@
   - [Installation](#installation)
   - [Backend](#backend)
 - [Demo](#demo)
+- [Socials](#socials)
 
 ## Introduction
 
@@ -75,6 +76,6 @@ Here is a high level demo which shows how to use the app-
 
 **Video Link** - https://www.youtube.com/watch?v=XU2uxFrCKj4&t=1s
 
-## Socials-
- Linkedln- https://www.linkedin.com/in/abir-dutta-408759223/
- Twitter- https://twitter.com/ItsDutta99
+## Socials
+- Linkedln- https://www.linkedin.com/in/abir-dutta-408759223/
+- Twitter- https://twitter.com/ItsDutta99
