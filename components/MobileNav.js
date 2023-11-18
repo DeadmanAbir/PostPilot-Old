@@ -4,6 +4,7 @@ import Link from "next/link";
 import { UserButton } from "@clerk/nextjs";
 import { useRouter } from "next/router";
 import { usePathname } from "next/navigation";
+import Image from "next/image";
 function MobileNav({ setMobileNav }) {
     const { userId } = useAuth();
     const router = useRouter();
@@ -13,10 +14,12 @@ function MobileNav({ setMobileNav }) {
         <div className="w-[80%] lg:hidden visible h-screen bg-[#04091E] absolute z-50 mt-[-33%]">
             <div className="text-white">
                 <Link href="/">
-                    <img
+                    <Image
                         src="/PostPilot.png"
                         alt=""
-                        className="h-[76px] w-[75px] lg:h-[75px] lg:w-[85px] cursor-pointer"
+                        height={76}
+                        width={76}
+                        className="cursor-pointer"
                     />
                 </Link>
                 <div className="text-[18px] font-[400] leading-normal py-10 px-6 flex flex-col gap-5">

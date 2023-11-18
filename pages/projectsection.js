@@ -10,7 +10,7 @@ import axios from 'axios';
 import Head from 'next/head';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-function projectsection({ data, userId }) {
+function Projectsection({ data, userId }) {
 
 
   const [isProjectOpen, setProject] = useState(false);
@@ -52,7 +52,7 @@ function projectsection({ data, userId }) {
   );
 }
 
-export default projectsection
+export default Projectsection
 
 
 function ProjectCard({ name, id, userId }) {

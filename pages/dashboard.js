@@ -1,6 +1,5 @@
 import { useState } from 'react'
 import { useSearchParams } from 'next/navigation'
-import { RxCross1 } from "react-icons/rx";
 import { useAuth } from '@clerk/nextjs';
 import axios from 'axios';
 import { useRouter } from 'next/router';
@@ -8,7 +7,7 @@ import Image from 'next/image';
 import Head from 'next/head';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-function dashboard() {
+function Dashboard() {
   const searchParams = useSearchParams()
   const providerName = searchParams.get('social')
   const [type, setType] = useState(null);
@@ -149,4 +148,4 @@ function dashboard() {
 
 }
 
-export default dashboard
+export default Dashboard
