@@ -9,6 +9,7 @@
 - [Getting Started](#getting-started)
   - [Prerequisites](#prerequisites)
   - [Installation](#installation)
+  - [Backend](#backend)
 - [Demo](#Demo)
 
 ## Introduction
@@ -40,6 +41,11 @@
 5. Start the development environment: 
   - Now enter command: `npm run dev`
 
+### Backend
+
+Here the repo for PostPilot's Backend- https://github.com/DeadmanAbir/PP-Backend
+
+
 ## Usage
 
 ### Linkedin Auto Posting AI Bot
@@ -68,3 +74,7 @@
 Here is a high level demo which shows how to use the app-
 
 **Video Link** - https://www.youtube.com/watch?v=XU2uxFrCKj4&t=1s
+
+## Socials-
+ Linkedln- https://www.linkedin.com/in/abir-dutta-408759223/
+ Twitter- https://twitter.com/ItsDutta99
