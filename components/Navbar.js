@@ -2,7 +2,8 @@ import React, { useState, useEffect } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { useRouter } from 'next/router';
-import { RxCross1 } from "react-icons/rx";
+import { dark, light, neobrutalism, shadesOfPurple } from '@clerk/themes';
+
 import { usePathname } from 'next/navigation'
 import { useAuth as Auth, UserButton, currentUser, auth as serverAuth } from "@clerk/nextjs";
 import MobileNav from './MobileNav';
@@ -19,8 +20,8 @@ function Navbar() {
 
 
 
-  const[mobileNav, setMobileNav] = useState(false);
- 
+  const [mobileNav, setMobileNav] = useState(false);
+
   const navigate = useRouter();
   return (
     <>
@@ -32,20 +33,20 @@ function Navbar() {
             </Link>
             {mobileNav ? (
               <div className=' lg:hidden visible  text-[24px]'>
-              
-              <FontAwesomeIcon icon={faXmark} style={{color: "white"}}  onClick={() => {
-                setMobileNav(false);
-                }}/>
-                </div>
-              
+
+                <FontAwesomeIcon icon={faXmark} style={{ color: "white" }} onClick={() => {
+                  setMobileNav(false);
+                }} />
+              </div>
+
 
             ) : (
-           
-<div className='lg:hidden visible text-[24px]'>
-              <FontAwesomeIcon icon={faBars}    onClick={() => {
-                 setMobileNav(true);
-                 }} />
-                 </div>
+
+              <div className='lg:hidden visible text-[24px]'>
+                <FontAwesomeIcon icon={faBars} onClick={() => {
+                  setMobileNav(true);
+                }} />
+              </div>
             )}
           </div>
           <div className="lg:flex gap-6 px-9 text-[16px] font-[500] lg:visible hidden">
@@ -77,15 +78,18 @@ function Navbar() {
           </div>
           <div className="lg:flex flex-row gap-5 lg:visible hidden">
             {userId ? (
-
-              <UserButton afterSignOutUrl='/' />
+              <div className='text-[white]'>
+                <UserButton afterSignOutUrl='/' showName={true} appearance={{
+                  baseTheme: shadesOfPurple
+                }} />
+              </div>
             ) : (
               <>
                 {" "}
                 <button
                   className="text-[20px] font-[300] underline underline-offset-8"
                   onClick={() => {
-                   
+
                     navigate.push("/sign-in")
                   }}
                 >
@@ -95,7 +99,7 @@ function Navbar() {
                 <button
                   className="aai-gradient-outline-btn"
                   onClick={() => {
-                   
+
                     navigate.push("/sign-up")
                   }}
                 >
@@ -108,7 +112,7 @@ function Navbar() {
 
       </div>
       {mobileNav ? (
-        <MobileNav  setMobileNav={setMobileNav}/>
+        <MobileNav setMobileNav={setMobileNav} />
 
       ) : (null)}
 
