@@ -55,7 +55,7 @@ const Footer = () => {
               <a className="text-[16px] font-[400] leading-[24px] hover:text-orange-400" href="https://youtu.be/XU2uxFrCKj4?si=j2hx8OwK0iisZ969" target="_blank" rel="noopener noreferrer">
                 Demo Video
               </a>
-              <a className="text-[16px] font-[400] leading-[24px] hover:text-orange-400" href="https://github.com/DeadmanAbir" target="_blank">
+              <a className="text-[16px] font-[400] leading-[24px] hover:text-orange-400" href="https://github.com/DeadmanAbir/PostPilot" target="_blank">
                 Github
               </a>
             </div>
