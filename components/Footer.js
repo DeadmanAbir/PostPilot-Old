@@ -33,7 +33,7 @@ const Footer = () => {
                   </a>
                 </div>
                 <div className="bg-gray-800 rounded-full w-10 h-10 flex justify-center items-center">
-                  <a href="https://github.com/DeadmanAbir" target="_blank" rel="noopener noreferrer" className=" text-gray-400">
+                  <a href="https://github.com/DeadmanAbir/PostPilot" target="_blank" rel="noopener noreferrer" className=" text-gray-400">
                   <FontAwesomeIcon icon={faGithub} />
                   </a>
                 </div>
