@@ -1,5 +1,11 @@
 # Post Pilot
 
+
+![Screenshot 2023-11-20 011227](https://github.com/DeadmanAbir/PostPilot/assets/102755654/493f54b6-b3c8-48c2-b3a3-297f810bb3c8)
+
+
+
+
 **Post Pilot** is a AI powered Ghostwriting platform that combines three main tools: Web Scrapping,  AI Powered content generation and Auto posting bot. It allows users to chose from a wide variety of news type content and generate latest and engaging piece of content that will be automatically posted on the platform of their choice at the interval/frequency set up by the user .
 
 ## Table of Contents
