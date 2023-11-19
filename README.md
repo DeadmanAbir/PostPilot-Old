@@ -1,34 +1,84 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Post Pilot
+
+**Post Pilot** is a AI powered Ghostwriting platform that combines three main tools: Web Scrapping,  AI Powered content generation and Auto posting bot. It allows users to chose from a wide variety of news type content and generate latest and engaging piece of content that will be automatically posted on the platform of their choice at the interval/frequency set up by the user .
+
+## Table of Contents
+
+- [Introduction](#introduction)
+- [Features](#features)
+- [Getting Started](#getting-started)
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
+  - [Backend](#backend)
+- [Demo](#demo)
+- [Socials](#socials)
+
+
+**Website Link**- https://post-pilot-blush.vercel.app/
+
+## Introduction
+
+**PostPilot** is an AI ghostwriter which posts everyday on Linkedln on your behalf.Choose any news niece and enjoy daily automated high quality posting.
+
+## Features
+
+- **Web Scrapping** The PuppeteerJS bot extracts information from the news websites and store it in database. This operation is done everyday at a specific time.
+
+- **AI Powered Post generator:** In our application, we've seamlessly integrated GPT 3.5 turbo to generate captivating and thought-provoking posts for you. The GPT api takes news from DB that the scraper has scraped and generates high quality posts.
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+- Node.js and npm
+- Next.js
+- Express
+- Tailwind
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Installation
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+1. Clone the repository: `https://github.com/DeadmanAbir/PostPilot.git`
+2. Enter the code in project terminal: `cd PostPilot`
+3. Now enter the command `npm install`
+   
+4. Configure environment variables: Create a .env file in the root of project, and set up the required environment variables such as database connection details, API keys, and other configurations.
+5. Start the development environment: 
+  - Now enter command: `npm run dev`
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+### Backend
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+Here the repo for PostPilot's Backend- https://github.com/DeadmanAbir/PP-Backend
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+## Usage
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Linkedin Auto Posting AI Bot
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+- Visit the **Dashboard** page to automate your Linkedln account by authorizing the app and selecting the news type that you want to post in your account.
+- Select form a wide variety of category for your content based on your preferences.
+- Click on `start automation` button to spin up a magical post for you that will be posted to your account.
+- After a succesfull project creation and post, a email will be sent from PostPilot
 
-## Deploy on Vercel
+### PuppeteerJS for web scraping
+- The puppeteerJS bot scrapes latest news from news websites and store it into DB. 
+- This stored news is then shared with ChatGPT to produce high quality, thought proving
+- and engaging piece of content that you can share on your socials. 
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### OpenAI's ChatGPT Integration
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- We have integrated GPT 3.5 turbo in our app to make thought provoking, exciting and engaging post for you .
+- The GPT API automatically detects the news type selected by you and takes in input from the puppeteerJS scrapper to give you that latest and hot piece of engaging content.
+
+### Email functionality using NodeMailer
+
+- We have used `Nodemailer` for email notification. After every succesfull post via PostPilot, a email will be sent to user's gmail.
+
+## Demo
+
+Here is a high level demo which shows how to use the app-
+
+**Video Link** - https://www.youtube.com/watch?v=XU2uxFrCKj4&t=1s
+
+## Socials
+- Linkedln- https://www.linkedin.com/in/abir-dutta-408759223/
+- Twitter- https://twitter.com/ItsDutta99
