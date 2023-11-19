@@ -32,6 +32,10 @@
 
 - **AI Powered Post generator:** In our application, we've seamlessly integrated GPT 3.5 turbo to generate captivating and thought-provoking posts for you. The GPT api takes news from DB that the scraper has scraped and generates high quality posts.
 
+- **Automated Posts:** After you successfully create a project, PostPilot will automatically post every day to your LinkedIn, and the content will be unique every day.
+
+
+
 ## Getting Started
 
 ### Prerequisites
