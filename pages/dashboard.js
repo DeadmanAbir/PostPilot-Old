@@ -40,7 +40,7 @@ function Dashboard() {
       })
       router.push("/projectsection");
       const timeoutId = setTimeout(() => {
-        toast.success("New project added successfully, and a demo post has been done from yout account. Please check");
+        toast.success("A new project has been added successfully, and a demo post has been done from your account. Please check!");
 
       }, 5000);
     } catch (e) {
