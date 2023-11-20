@@ -1,5 +1,11 @@
 # Post Pilot
 
+
+![Screenshot 2023-11-20 011227](https://github.com/DeadmanAbir/PostPilot/assets/102755654/493f54b6-b3c8-48c2-b3a3-297f810bb3c8)
+
+
+
+
 **Post Pilot** is a AI powered Ghostwriting platform that combines three main tools: Web Scrapping,  AI Powered content generation and Auto posting bot. It allows users to chose from a wide variety of news type content and generate latest and engaging piece of content that will be automatically posted on the platform of their choice at the interval/frequency set up by the user .
 
 ## Table of Contents
@@ -25,6 +31,10 @@
 - **Web Scrapping** The PuppeteerJS bot extracts information from the news websites and store it in database. This operation is done everyday at a specific time.
 
 - **AI Powered Post generator:** In our application, we've seamlessly integrated GPT 3.5 turbo to generate captivating and thought-provoking posts for you. The GPT api takes news from DB that the scraper has scraped and generates high quality posts.
+
+- **Automated Posts:** After you successfully create a project, PostPilot will automatically post every day to your LinkedIn, and the content will be unique every day.
+
+
 
 ## Getting Started
 
