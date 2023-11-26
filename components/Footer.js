@@ -7,12 +7,15 @@ const Footer = () => {
         <div className="flex flex-col lg:w-[70%] mx-auto">
           <div className="flex lg:flex-row flex-col lg:items-center lg:px-0 px-6 lg:justify-evenly">
             <div className="flex flex-col gap-6 lg:w-[30%]">
+             
               <Image
                 src="/PostPilot.png"
                 alt=""
                 width={100}
                 height={100}
+                className="cursor-pointer"
               />
+             
               <p className="text-[18px] font-[400] leading-[27px]">
                 Posting AI Generated News Content Everyday with Ease.
               </p>

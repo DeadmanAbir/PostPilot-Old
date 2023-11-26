@@ -79,7 +79,7 @@ function Dashboard() {
               News Category :
             </label>
             <select
-              className="px-16 bg-[#0E1327] border border-white py-3 text-[20px] rounded-2xl"
+              className="px-16 bg-[#0E1327] border border-white py-3 text-[20px] rounded-2xl cursor-pointer"
               id="schedule"
               required
               onChange={(e) => {
@@ -100,7 +100,7 @@ function Dashboard() {
               Schedule :
             </label>
             <select
-              className="px-16 bg-[#0E1327] border border-white py-3 text-[20px] rounded-2xl"
+              className="px-16 bg-[#0E1327] border border-white py-3 text-[20px] rounded-2xl cursor-pointer"
               required
               id="catagory"
               onChange={(e) => {
@@ -117,7 +117,7 @@ function Dashboard() {
               type="text"
               placeholder="Name"
 
-              className="bg-[#080E26] border border-white py-3 lg:py-4 px-2 rounded-2xl mb-10"
+              className="cursor-pointer bg-[#080E26] border border-white py-3 lg:py-4 px-2 rounded-2xl mb-10"
               required
               onChange={(e) => {
                 setName(e.target.value)

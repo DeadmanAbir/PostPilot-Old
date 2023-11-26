@@ -24,7 +24,7 @@ function Projectsection({ data, userId }) {
       <div className="flex justify-center flex-wrap gap-10 pt-[10rem] lg:px-0 px-10 py-20">
         <div className="bg-[#111629] w-[28rem] h-[15rem] lg:h-[20rem] flex gap-4 flex-col justify-center items-center rounded-3xl border border-white">
 
-          <FontAwesomeIcon icon={faPlus} className="text-[24px]" onClick={() => {
+          <FontAwesomeIcon icon={faPlus} className="text-[24px] cursor-pointer " onClick={() => {
             setProject(true);
           }} />
 
