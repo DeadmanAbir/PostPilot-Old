@@ -17,7 +17,9 @@
   - [Installation](#installation)
   - [Backend](#backend)
 - [Demo](#demo)
+- [Scraper](#scraper)
 - [Socials](#socials)
+
 
 
 **Website Link**- https://post-pilot-blush.vercel.app/
@@ -89,6 +91,15 @@ Here is a high level demo which shows how to use the app-
 
 **Video Link** - https://www.youtube.com/watch?v=XU2uxFrCKj4&t=1s
 
+
+## Scraper
+
+- PostPilot has an scraper, which is built on Puppeteer.js, which runs daily to scrape and gather news.
+- Ths gthered news is stored in DB, which is later used for post creation.
+- Scraper Repo - https://github.com/DeadmanAbir/PP-Scraper
+
+
 ## Socials
 - Linkedln- https://www.linkedin.com/in/abir-dutta-408759223/
 - Twitter- https://twitter.com/ItsDutta99
+
